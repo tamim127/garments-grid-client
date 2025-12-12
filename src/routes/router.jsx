@@ -7,6 +7,9 @@ import NotFoundPage from "../pages/NotFound/NotFoundPage.jsx";
 
 import RootLayout from "../components/layout/RootLayout.jsx";
 import LoginPage from "../pages/Auth/LoginPage.jsx";
+import RegisterPage from "../pages/Auth/RegisterPage.jsx";
+import ProtectedRoute from "./ProtectedRoute.jsx";
+import DashboardLayout from "../pages/Dashboard/layout/DashboardLayout.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -16,9 +19,21 @@ export const router = createBrowserRouter([
       { path: "/products", element: <AllProductsPage /> },
       { path: "/about", element: <AboutPage /> },
       { path: "/login", element: <LoginPage /> },
+      { path: "/register", element: <RegisterPage /> },
 
       // Not Found
       { path: "*", element: <NotFoundPage /> },
+    ],
+  },
+  {
+    path: "dashboard",
+    element: (
+      <ProtectedRoute>
+        <DashboardLayout />
+      </ProtectedRoute>
+    ),
+    children: [
+      
     ],
   },
 ]);
