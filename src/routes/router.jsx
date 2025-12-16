@@ -20,6 +20,7 @@ export const router = createBrowserRouter([
       { path: "/about", element: <AboutPage /> },
       { path: "/login", element: <LoginPage /> },
       { path: "/register", element: <RegisterPage /> },
+      { path: "/all-product", element: <AllProductsPage /> },
 
       // Not Found
       { path: "*", element: <NotFoundPage /> },
@@ -32,8 +33,6 @@ export const router = createBrowserRouter([
         <DashboardLayout />
       </ProtectedRoute>
     ),
-    children: [
-      
-    ],
+    children: [],
   },
 ]);

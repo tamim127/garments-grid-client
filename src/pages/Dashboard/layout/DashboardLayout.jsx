@@ -5,7 +5,7 @@ import { gsap } from "gsap";
 
 import DashboardHeader from "./DashboardHeader";
 
-import { Sidebar } from "lucide-react"; // icon only
+import { Sidebar } from "lucide-react"; 
 import { useAuth } from "../../../contexts/AuthContext";
 
 const DashboardLayout = () => {

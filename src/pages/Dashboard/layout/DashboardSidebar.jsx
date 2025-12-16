@@ -41,7 +41,7 @@ const commonRoutes = [
 const DashboardSidebar = ({ sidebarOpen, setSidebarOpen }) => {
   const { user, logout } = useAuth();
 
-  // Assume role is stored in user object or you can fetch from DB later
+
   const role = user?.role || "buyer"; // Default to buyer
 
   const routes =
