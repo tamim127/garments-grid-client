@@ -10,17 +10,18 @@ import LoginPage from "../pages/Auth/LoginPage.jsx";
 import RegisterPage from "../pages/Auth/RegisterPage.jsx";
 import ProtectedRoute from "./ProtectedRoute.jsx";
 import DashboardLayout from "../pages/Dashboard/layout/DashboardLayout.jsx";
+import ProductDetailsPage from "../pages/Products/ProductDetailsPage.jsx";
 
 export const router = createBrowserRouter([
   {
     element: <RootLayout />,
     children: [
       { path: "/", element: <HomePage /> },
-      { path: "/products", element: <AllProductsPage /> },
       { path: "/about", element: <AboutPage /> },
       { path: "/login", element: <LoginPage /> },
       { path: "/register", element: <RegisterPage /> },
       { path: "/all-product", element: <AllProductsPage /> },
+      { path: "product/:id", element: <ProductDetailsPage /> },
 
       // Not Found
       { path: "*", element: <NotFoundPage /> },
